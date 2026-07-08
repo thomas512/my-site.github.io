@@ -1,0 +1,382 @@
+/* =========================================================
+   Osteria dei nonni — foglio di stile del menù
+   Palette: carta invecchiata, inchiostro, vino, ottone
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap');
+
+:root{
+  --paper:      #efe6d6;
+  --paper-dark: #e6dac4;
+  --ink:        #2b241d;
+  --ink-soft:   #5a4f42;
+  --wine:       #6b1e23;
+  --wine-dark:  #4c1519;
+  --brass:      #a9812f;
+  --brass-soft: #c8a862;
+  --rule:       rgba(43, 36, 29, 0.25);
+
+  --display: 'Playfair Display', serif;
+  --body:    'Cormorant Garamond', serif;
+  --utility: 'Jost', sans-serif;
+}
+
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(43,36,29,0.05) 1px, transparent 1px),
+    radial-gradient(rgba(43,36,29,0.04) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 2px 3px;
+  color: var(--ink);
+  font-family: var(--body);
+  line-height: 1.5;
+}
+
+/* Bordo cornice a doppio filo, come inciso sulla carta */
+.frame{
+  margin: 14px;
+  border: 1.5px solid var(--ink);
+  outline: 1px solid var(--ink);
+  outline-offset: 6px;
+}
+
+.container{
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 32px 40px;
+}
+
+/* ---------- Intestazione ---------- */
+
+.menu-header{
+  text-align: center;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 36px;
+}
+
+.menu-header .eyebrow{
+  font-family: var(--utility);
+  font-size: 0.7rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.menu-header h1{
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6vw, 3.8rem);
+  margin: 10px 0 6px;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.menu-header .sottotitolo{
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+}
+
+.crest{
+  width: 46px;
+  height: 46px;
+  margin: 4px auto 14px;
+  display: block;
+  color: var(--brass);
+}
+
+.menu-header .indirizzo{
+  font-family: var(--utility);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---------- Navigazione portate ---------- */
+
+.portate-nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  margin-bottom: 48px;
+}
+
+.portate-nav a{
+  font-family: var(--utility);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.portate-nav a:hover,
+.portate-nav a:focus-visible{
+  color: var(--wine);
+  border-color: var(--wine);
+}
+
+/* ---------- Sezioni / portate ---------- */
+
+.portata{
+  margin-bottom: 54px;
+  scroll-margin-top: 24px;
+}
+
+.portata-intestazione{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.numero-romano{
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--brass);
+  line-height: 1;
+}
+
+.portata-titolo{
+  text-align: center;
+}
+
+.portata-titolo h2{
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.portata-titolo .sotto{
+  display: block;
+  font-family: var(--utility);
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 3px;
+}
+
+.fregio{
+  width: 34px;
+  height: 12px;
+  color: var(--brass);
+  justify-self: start;
+}
+.portata-intestazione .fregio:last-child{
+  justify-self: end;
+  transform: scaleX(-1);
+}
+
+/* ---------- Voci del menù ---------- */
+
+.voce{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: 10px;
+  padding: 14px 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.voce:last-child{ border-bottom: none; }
+
+.voce-nome{
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 1.22rem;
+  color: var(--ink);
+}
+
+.voce-nome .tag{
+  font-family: var(--utility);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--wine);
+  border: 1px solid var(--wine);
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+
+.voce-prezzo{
+  font-family: var(--utility);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--wine-dark);
+  white-space: nowrap;
+}
+
+.voce-descrizione{
+  grid-column: 1 / -1;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+  max-width: 56ch;
+}
+
+/* ---------- Vini (layout leggermente diverso) ---------- */
+
+.vino-riga{
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 6px 16px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dotted var(--rule);
+}
+.vino-riga:last-child{ border-bottom: none; }
+
+.vino-nome{ font-size: 1.08rem; }
+.vino-nome small{
+  display: block;
+  font-family: var(--utility);
+  font-style: normal;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.vino-calice, .vino-bottiglia{
+  font-family: var(--utility);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-align: right;
+}
+.vino-bottiglia{ color: var(--wine-dark); font-weight: 500; }
+
+.vino-legenda{
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  font-family: var(--utility);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+
+/* ---------- Nota allergeni ---------- */
+
+.nota{
+  text-align: center;
+  font-family: var(--utility);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin: 8px auto 0;
+}
+
+/* ---------- Pié di pagina ---------- */
+
+.menu-footer{
+  margin-top: 54px;
+  padding-top: 26px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+.menu-footer .firma{
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--wine);
+  margin-bottom: 8px;
+}
+
+.menu-footer .dettagli{
+  font-family: var(--utility);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  line-height: 1.9;
+}
+
+/* ---------- Torna su ---------- */
+
+.torna-su{
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--ink);
+  background: var(--paper-dark);
+  color: var(--ink);
+  font-family: var(--utility);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.torna-su:hover, .torna-su:focus-visible{
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ---------- Accessibilità: focus visibile ---------- */
+
+a:focus-visible{
+  outline: 2px solid var(--wine);
+  outline-offset: 3px;
+}
+
+/* ---------- Riduzione movimento ---------- */
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  .torna-su{ transition: none; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 560px){
+  .container{ padding: 44px 18px 28px; }
+  .frame{ margin: 8px; outline-offset: 4px; }
+
+  .portata-intestazione{
+    grid-template-columns: 1fr;
+    text-align: center;
+    row-gap: 8px;
+  }
+  .numero-romano{ order: -1; }
+  .fregio{ display: none; }
+
+  .voce{ grid-template-columns: 1fr; row-gap: 4px; }
+  .voce-prezzo{ font-size: 0.95rem; }
+
+  .vino-riga{ grid-template-columns: 1fr; text-align: left; row-gap: 2px; }
+  .vino-calice, .vino-bottiglia{ text-align: left; }
+  .vino-legenda{ justify-content: flex-start; }
+
+  .portate-nav{ gap: 8px 14px; }
+}
