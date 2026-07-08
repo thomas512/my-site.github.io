@@ -20,7 +20,7 @@ Nessun framework, nessuna build, nessuna dipendenza da installare.
 
 Basta aprire `index.html` in un browser, oppure visitare la versione online:
 
-🔗 ...
+🔗 https://thomas512.github.io/my-site.github.io/
 
 ## Struttura del progetto
 
