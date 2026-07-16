@@ -36,6 +36,13 @@
     <a href="#dolci">Dolci</a>
   </nav>
 
+   <div class="filtro-persona">
+    <button type="button" id="filtro-persona-btn" aria-pressed="false">
+      <span class="pallino" aria-hidden="true"></span>
+      <span id="filtro-persona-testo">Filtro Greta disattivato</span>
+    </button>
+  </div>
+
   <!-- ANTIPASTI -->
   <section class="portata" id="antipasti">
     <div class="portata-intestazione">
@@ -95,17 +102,17 @@
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Una salsa che solo in pochi hanno avuto l'occasione di assaggiarla. (non sempre disponibile)</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Pasta Salsiccia e Funghi</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Salsiccia saporita e funghi profumati per un piatto rustico e ricco di gusto.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Tramonto nel Bosco</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Un incontro tra i colori del tramonto e i profumi del bosco, una salsa con funghi panna e pomodoro.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Pasta Aglio, Olio e Peperoncino</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Un grande classico: semplicità, profumo e carattere in ogni forchettata.</p>
@@ -115,12 +122,12 @@
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">La delicatezza del salmone incontra una crema morbida per un gusto elegante e irresistibile.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Pasta al Granchio</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Un piatto dal sapore marino, con la dolcezza del granchio e tutta la freschezza del mare.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Pasta agli Scampi</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Scampi e pasta si uniscono in una ricetta raffinata dal profumo mediterraneo.</p>
@@ -163,27 +170,27 @@
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Un mix di carni saporite alla brace, per un piatto ricco e conviviale.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Petto di Pollo in Crema di Funghi</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">La delicatezza del pollo incontra una crema vellutata ai funghi dal sapore avvolgente.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Branzino alla Brace</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Il profumo della brace esalta la delicatezza del branzino in un piatto genuino e raffinato.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Salmone alla Brace</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Salmone morbido e gustoso, impreziosito dal sapore unico della cottura alla brace.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Cacciucco</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Una specialità di mare ricca e intensa, con il profumo del pesce e la tradizione della costa.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Frittura di Mare</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Croccante fuori e delicata dentro: un mix di sapori del mare tutto da gustare.</p>
@@ -211,12 +218,12 @@
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Patate morbide dentro e dorate fuori, con tutto il profumo della cucina di casa.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Patate lesse</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Semplici e genuine, un classico leggero dal sapore autentico.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Fagiolini</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Freschi e delicati, per un contorno semplice e ricco di bontà.</p>
@@ -231,7 +238,7 @@
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Morbidi e nutrienti, con il sapore genuino della cucina di una volta.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Frittata di Asparagi</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Uova e asparagi si incontrano in una frittata soffice e profumata.</p>
@@ -241,17 +248,17 @@
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Delicata e gustosa, con tutto il sapore delle zucchine fresche.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Zucchine in Padella</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Semplici e saporite, cotte in padella per esaltarne tutto il gusto.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Cavolo in Padella</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Un contorno rustico e genuino, ricco dei sapori della tradizione.</p>
     </div>
-    <div class="voce">
+    <div class="voce persona-no">
       <span class="voce-nome">Peperoni in Padella</span>
       <span class="voce-prezzo">€ 0</span>
       <p class="voce-descrizione">Dolci e colorati, cucinati lentamente per un gusto pieno e avvolgente.</p>
@@ -290,6 +297,19 @@
 </div>
 
 <a href="#top" class="torna-su" aria-label="Torna in cima alla pagina">↑</a>
+
+<script>
+  var pulsante = document.getElementById('filtro-persona-btn');
+  var testo = document.getElementById('filtro-persona-testo');
+ 
+  pulsante.addEventListener('click', function () {
+    var attivo = document.body.classList.toggle('filtro-attivo');
+    pulsante.setAttribute('aria-pressed', attivo ? 'true' : 'false');
+    testo.textContent = attivo
+      ? 'Filtro Greta attivo'
+      : 'Filtro Greta disattivato';
+  });
+</script>
 
 </body>
 </html>
